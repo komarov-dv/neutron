@@ -1216,18 +1216,18 @@ class Dnsmasq(DhcpLocalProcess):
                     if gateway:
                         host_routes.append("%s,%s" % (constants.IPv4_ANY,
                                                       gateway))
-                    options.append(
-                        self._format_option(
-                            subnet.ip_version,
-                            self._SUBNET_TAG_PREFIX % subnet.id,
-                            'classless-static-route',
-                            ','.join(host_routes)))
-                    options.append(
-                        self._format_option(
-                            subnet.ip_version,
-                            self._SUBNET_TAG_PREFIX % subnet.id,
-                            WIN2k3_STATIC_DNS,
-                            ','.join(host_routes)))
+                    #options.append(
+                    #    self._format_option(
+                    #        subnet.ip_version,
+                    #        self._SUBNET_TAG_PREFIX % subnet.id,
+                    #        'classless-static-route',
+                    #        ','.join(host_routes)))
+                    #options.append(
+                    #    self._format_option(
+                    #        subnet.ip_version,
+                    #        self._SUBNET_TAG_PREFIX % subnet.id,
+                    #        WIN2k3_STATIC_DNS,
+                    #        ','.join(host_routes)))
 
                 if gateway:
                     options.append(self._format_option(
